@@ -3,17 +3,23 @@ pipeline {
 
   stages {
     stage('Build') {
-      sh './bin/build'
+      steps {
+        sh './bin/build'
+      }
     }
 
     stage('Extract RPM') {
-      sh './bin/cp'
+      steps {
+        sh './bin/cp'
+      }
     }
   }
 
   post {
     always {
-      sh './bin/rmi'
+      steps {
+        sh './bin/rmi'
+      }
     }
   }
 }
