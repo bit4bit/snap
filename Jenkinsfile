@@ -17,9 +17,7 @@ pipeline {
 
   post {
     always {
-      steps {
-        sh './bin/rmi'
-      }
+      sh './bin/rmi'
     }
   }
 }
