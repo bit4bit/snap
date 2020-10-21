@@ -3,4 +3,4 @@ set -ex
 version=`cat version`
 snap_version=`cat snap-version`
 mkdir -p rpm
-docker run --rm -v `pwd`/rpm:/rpm albuild-snap:$version /bin/bash -l -c "cp -f /root/rpmbuild/RPMS/x86_64/*-$snap_version-0.amzn2.x86_64.rpm /rpm"
+docker run --rm -v \'`pwd`\'/rpm:/rpm albuild-snap:$version /bin/bash -l -c "cp -f /root/rpmbuild/RPMS/x86_64/*-$snap_version-0.amzn2.x86_64.rpm /rpm"
