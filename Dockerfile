@@ -39,4 +39,5 @@ RUN mkdir -p /root/rpmbuild/{SOURCES,SPECS}
 WORKDIR /root/rpmbuild
 RUN wget https://github.com/snapcore/snapd/archive/$snap_version.tar.gz -O SOURCES/snapd-$snap_version.tar.gz
 RUN wget -P SOURCES https://github.com/snapcore/snapd/releases/download/$snap_version/snapd_$snap_version.only-vendor.tar.xz
+RUN wget -P SOURCES https://github.com/snapcore/snapd/releases/download/$snap_version/snapd_$snap_version.no-vendor.tar.xz
 RUN rpmbuild -bb /app/snapd/packaging/amzn-2/snapd.spec
