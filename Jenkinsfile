@@ -16,7 +16,7 @@ pipeline {
   }
 
   post {
-    always {
+    success {
       sh './bin/rmi'
     }
   }
