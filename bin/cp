@@ -1,4 +1,5 @@
-#!/usr/bin/env bash -ex
+#!/usr/bin/env bash
+set -ex
 version=`cat version`
 snap_version=`cat snap-version`
 mkdir -p rpm
